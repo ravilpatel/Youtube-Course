@@ -17,6 +17,9 @@ You can save playlists, track video progress, and navigate through videos one at
 - **Auto Save:** Playlist URL and video progress are saved in local storage and cookies.
 - **Load More Videos:** For large playlists, load additional videos in batches of 50.
 
+![Screenshot](https://github.com/user-attachments/assets/744648bf-577e-4103-8eec-6a6c0ad162c7)
+
+
 ---
 
 ## Demo
