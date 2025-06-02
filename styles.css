@@ -1,0 +1,221 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #111;
+  --card-bg: #fff;
+  --primary: #e63946;
+  --secondary: #457b9d;
+  --accent: #1d3557;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card-bg: #1e1e1e;
+  --primary: #ff6b6b;
+  --secondary: #6ec6ff;
+  --accent: #89c2d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  background: var(--card-bg);
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#sidebarProgress {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+#sidebarProgressBar {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+#videoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#videoList li {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+#videoList li:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+#videoList li.completed {
+  color: green;
+}
+
+#loadMoreBtn {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h1 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar button {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.input-group {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#playlistUrl {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+
+.button-group button {
+  padding: 10px 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.videoCard {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.videoCard.completed {
+  border-left: 5px solid green;
+}
+
+.videoCard h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.videoCard iframe {
+  width: 100%;
+  height: 460px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.videoCard button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.markComplete {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.nextVideo {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.prevVideo {
+  background-color: #f4a261;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Scroll styling */
+.sidebar::-webkit-scrollbar,
+.main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.main::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
